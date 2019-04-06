@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Котопедия</title>
+</head>
+<body>
+<h1>Наши коты</h1>
+<a href="/add">Добавить своего</a>
+{% for cat in cats %}
+<h3>{{ loop.index }}. <a href="/cats/{{ loop.index }}">{{ cat['name'] }}</a></h3>
+<img style="height: 100px;" src="{{ cat['photo'] }}"/>
+
+{% endfor %}
+</body>
+</html>
